@@ -1,0 +1,19 @@
+<% include header %>
+<% if(enteries.length){%>
+	<% enteries.forEach(function(entry){ {%>
+	<div class = "panel panel-default">
+		<div class = "panel-heading">
+			<div class = "text-muted pull-right">
+				<% entry.published%>
+			</div>
+			<% entry.title %>
+		</div>
+		<div class = "panel-body">
+			<% entry.body %>
+		</div>
+	</div>
+	<% }) %>
+	<% } else { %>
+	No enteries <a href = "/new-entry"> Add a game?</a>
+	<% } %>	
+<% include footer %>
